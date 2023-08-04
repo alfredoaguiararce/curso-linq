@@ -8,7 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="books.json"/>
+    <None Remove="books.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="books.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Program.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
 
 </Project>
